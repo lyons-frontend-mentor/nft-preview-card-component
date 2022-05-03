@@ -8,6 +8,9 @@ module.exports = {
         darkbluebg: "hsl(217, 54%, 11%)",
         darkbluecard: "hsl(216, 50%, 16%)",
         darkblueline: "hsl(215, 32%, 27%)"
+      },
+      fontFamily: {
+        outfit: ["Outfit", "sans-serif"]
       }
     },
   },

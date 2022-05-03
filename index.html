@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="icon"
       type="image/png"
@@ -26,33 +33,69 @@
       }
     </style>
   </head>
-  <body>
-    <main class="min-h-screen bg-darkbluebg">
-      <section>
+  <body class="font-outfit text-softblue">
+    <main
+      class="flex min-h-screen items-center justify-center bg-darkbluebg py-16 px-6"
+    >
+      <section class="max-w-xs rounded-2xl bg-darkbluecard p-6 sm:pb-8">
         <!-- NFT image with eye icon -->
-        <button>
-          <img src="./images/image-equilibrium.jpg" alt="Equilibrium NFT" />
-          <img src="./images/icon-view.svg" alt="" />
+        <button
+          class="group relative w-full overflow-hidden rounded-lg bg-cyan focus:outline-0"
+        >
+          <img
+            src="./images/image-equilibrium.jpg"
+            alt="Equilibrium NFT"
+            class="group-hover:opacity-50 group-focus:opacity-50"
+          />
+          <img
+            src="./images/icon-view.svg"
+            alt=""
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-focus:opacity-100"
+          />
         </button>
-        <a href="#">
-          <h1>Equilibrium #3429</h1>
+        <!-- Change to a group since h1 doesn't inherit by default; could also probably use text-inherit on h1 for most properties -->
+        <a href="#" class="group mt-6 block hover:text-cyan focus:outline-0">
+          <h1
+            class="text-2xl font-semibold text-white group-hover:text-cyan group-focus:text-cyan group-focus:outline-0 group-focus-visible:underline"
+          >
+            Equilibrium #3429
+          </h1>
         </a>
-        <p>Our Equilibrium collection promotes balance and calm.</p>
-        <div>
-          <p>
-            <img src="./images/icon-ethereum.svg" alt="Ethereum icon" />
+        <p class="font-lg mt-3 font-light sm:mt-4">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="mt-4 flex items-center justify-between sm:mt-6">
+          <p class="font-sm sm:font-base font-semibold text-cyan">
+            <img
+              src="./images/icon-ethereum.svg"
+              alt="Ethereum icon"
+              class="font-sm mr-1.5 inline-block"
+            />
             0.041 ETH
           </p>
-          <p>
-            <img src="./images/icon-clock.svg" alt="" />
+          <p class="font-sm sm:font-base">
+            <img
+              src="./images/icon-clock.svg"
+              alt=""
+              class="font-sm mr-2 inline-block"
+            />
             3 days left
           </p>
         </div>
-        <hr />
-        <p>
-          <img src="./images/image-avatar.png" alt="Avatar" />
+        <hr class="mt-4 border-t-darkblueline sm:mt-6" />
+        <p class="font-sm sm:font-base mt-4">
+          <img
+            src="./images/image-avatar.png"
+            alt="Avatar"
+            class="avatar-border mr-4 inline-block w-8 rounded-full"
+          />
           Creation of
-          <a href="#"><span> Jules Wyvern </span></a>
+          <!-- Span inherits by default, so no need to change to a group -->
+          <a
+            href="#"
+            class="text-white hover:text-cyan focus:text-cyan focus:outline-0 focus-visible:underline"
+            ><span> Jules Wyvern</span></a
+          >
         </p>
       </section>
     </main>
